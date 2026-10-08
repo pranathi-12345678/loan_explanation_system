@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loan Decision Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">₹</div>
+
+            <div>
+                <h2>LoanSure</h2>
+                <span>Decision Explanation Portal</span>
+            </div>
+        </div>
+
+        <div class="secure-badge">
+            🔒 Secure Portal
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    ✦ Transparent Loan Decisions
+                </span>
+
+                <h1>
+                    Understand Your
+                    <span>Loan Decision</span>
+                </h1>
+
+                <p>
+                    Enter your Application ID to view your loan decision,
+                    the main factors that affected it, and helpful guidance.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Application Search -->
+        <section class="search-card">
+
+            <div class="search-icon">
+                🔍
+            </div>
+
+            <div class="search-content">
+
+                <h2>Check Your Application</h2>
+
+                <p>
+                    Enter the Application ID provided by your bank.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="applicationId">
+                        Application ID
+                    </label>
+
+                    <div class="input-row">
+
+                        <input
+                            type="number"
+                            id="applicationId"
+                            placeholder="e.g. 4023"
+                        >
+
+                        <button
+                            id="checkButton"
+                            onclick="checkApplication()"
+                        >
+                            Check Decision
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <div>
+                <strong>Checking your application...</strong>
+                <p>Please wait while we retrieve your decision.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Error -->
+        <div id="errorMessage" class="error hidden"></div>
+
+
+        <!-- Results -->
+        <section id="resultSection" class="result-section hidden">
+
+
+            <!-- Decision -->
+            <div class="decision-card">
+
+                <div class="section-heading">
+                    <div class="heading-icon">📋</div>
+
+                    <div>
+                        <h2>Loan Decision</h2>
+                        <p>Your application result</p>
+                    </div>
+                </div>
+
+                <div id="decision" class="decision"></div>
+
+            </div>
+
+
+            <!-- Main Factors -->
+            <div class="factors-section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">📊</div>
+
+                    <div>
+                        <h2>Main Factors</h2>
+                        <p>The three main factors that affected your decision</p>
+                    </div>
+
+                </div>
+
+                <div id="factorsContainer" class="factors-container"></div>
+
+            </div>
+
+
+            <!-- Reasons -->
+            <div class="reasons-section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">💡</div>
+
+                    <div>
+                        <h2>Why These Factors Affected Your Loan</h2>
+                        <p>Simple explanations for your application</p>
+                    </div>
+
+                </div>
+
+                <div id="reasonsContainer" class="reasons-container"></div>
+
+            </div>
+
+
+            <!-- Suggestions -->
+            <div
+                id="suggestionsSection"
+                class="suggestions-section"
+            >
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">🛠️</div>
+
+                    <div>
+                        <h2>Helpful Suggestions</h2>
+                        <p>Practical steps you can consider</p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="suggestionsContainer"
+                    class="suggestions-container"
+                ></div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                LoanSure Decision Explanation Portal
+            </p>
+
+            <span>
+                This portal explains factors associated with your loan decision.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

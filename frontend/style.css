@@ -1,0 +1,597 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7ebf2;
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand h2 {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+
+.brand span {
+    font-size: 12px;
+    color: #718096;
+}
+
+.secure-badge {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.main-container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero-section {
+    padding: 65px 20px 45px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 760px;
+    margin: auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+
+.hero-section h1 span {
+    color: #2563eb;
+}
+
+.hero-section p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* ================================
+   SEARCH CARD
+================================ */
+
+.search-card {
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 18px;
+    padding: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+    margin-bottom: 30px;
+}
+
+.search-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 14px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.search-content {
+    flex: 1;
+}
+
+.search-content h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.search-content > p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #d5dbe5;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-row input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.input-row button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.input-row button span {
+    margin-left: 8px;
+    font-size: 17px;
+}
+
+.input-row button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.input-row button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ================================
+   LOADING
+================================ */
+
+.loading {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+.loading p {
+    color: #718096;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.spinner {
+    width: 27px;
+    height: 27px;
+    border: 3px solid #dbeafe;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.error {
+    background: #fff1f2;
+    color: #be123c;
+    border: 1px solid #fecdd3;
+    padding: 15px 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ================================
+   UTILITY
+================================ */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================================
+   RESULT SECTIONS
+================================ */
+
+.decision-card,
+.factors-section,
+.reasons-section,
+.suggestions-section {
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.heading-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    color: #718096;
+    font-size: 13px;
+}
+
+
+/* ================================
+   DECISION
+================================ */
+
+.decision {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+.decision.approved {
+    background: #ecfdf3;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.decision.rejected {
+    background: #fff1f2;
+    color: #be123c;
+    border: 1px solid #fecdd3;
+}
+
+
+/* ================================
+   FACTOR CARDS
+================================ */
+
+.factors-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.factor-card {
+    position: relative;
+    border: 1px solid #e5eaf1;
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 21px;
+    transition: 0.2s;
+}
+
+.factor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    border-color: #bfdbfe;
+}
+
+.factor-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18px;
+    bottom: 18px;
+    width: 4px;
+    background: #2563eb;
+    border-radius: 0 5px 5px 0;
+}
+
+.factor-card h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    padding-left: 5px;
+}
+
+.factor-label {
+    color: #718096;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.factor-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #172033;
+}
+
+
+/* ================================
+   REASONS
+================================ */
+
+.reason-card {
+    background: #f8fafc;
+    border: 1px solid #e5eaf1;
+    border-left: 4px solid #2563eb;
+    padding: 17px 18px;
+    margin-bottom: 13px;
+    border-radius: 9px;
+    line-height: 1.6;
+}
+
+.reason-card:last-child {
+    margin-bottom: 0;
+}
+
+.reason-card strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.reason-card p {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+
+/* ================================
+   SUGGESTIONS
+================================ */
+
+.suggestions-section {
+    background: #fbfffc;
+}
+
+.suggestion-card {
+    background: #f0fdf4;
+    border: 1px solid #dcfce7;
+    border-left: 4px solid #16a34a;
+    padding: 17px 18px;
+    margin-bottom: 13px;
+    border-radius: 9px;
+    line-height: 1.6;
+}
+
+.suggestion-card:last-child {
+    margin-bottom: 0;
+}
+
+.suggestion-card strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #166534;
+}
+
+.suggestion-card p {
+    color: #365314;
+    font-size: 14px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+    padding: 30px 10px 45px;
+    color: #64748b;
+}
+
+footer p {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+footer span {
+    font-size: 11px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 14px 5%;
+    }
+
+    .secure-badge {
+        display: none;
+    }
+
+    .main-container {
+        width: 94%;
+    }
+
+    .hero-section {
+        padding: 45px 10px 30px;
+    }
+
+    .hero-section h1 {
+        font-size: 34px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+
+    .search-card {
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-row button {
+        padding: 14px;
+    }
+
+    .factors-container {
+        grid-template-columns: 1fr;
+    }
+
+    .decision-card,
+    .factors-section,
+    .reasons-section,
+    .suggestions-section {
+        padding: 22px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 450px) {
+
+    .brand h2 {
+        font-size: 17px;
+    }
+
+    .brand span {
+        font-size: 10px;
+    }
+
+    .brand-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 19px;
+    }
+
+    .hero-section h1 {
+        font-size: 29px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .decision {
+        font-size: 22px;
+    }
+}
